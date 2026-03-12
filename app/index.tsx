@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet, StatusBar } from "react-native";
+import { Text, View, StyleSheet, StatusBar, Pressable } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
 const COLORS = {
@@ -21,6 +21,26 @@ export default function Index() {
           <Text style={styles.tagline}>
             Your cozy place for recipes you love
           </Text>
+        </View>
+        <View style={styles.categoryGrid}>
+          <Pressable style={styles.categoryButton}>
+            <Text style={styles.categoryLabel}>🥗 Salads</Text>
+          </Pressable>
+          <Pressable style={styles.categoryButton}>
+            <Text style={styles.categoryLabel}>🥣 Soups</Text>
+          </Pressable>
+          <Pressable style={styles.categoryButton}>
+            <Text style={styles.categoryLabel}>🍽️ Mains</Text>
+          </Pressable>
+          <Pressable style={styles.categoryButton}>
+            <Text style={styles.categoryLabel}>🥐 Breakfasts</Text>
+          </Pressable>
+          <Pressable style={styles.categoryButton}>
+            <Text style={styles.categoryLabel}>🥤 Drinks</Text>
+          </Pressable>
+          <Pressable style={styles.categoryButton}>
+            <Text style={styles.categoryLabel}>🍰 Desserts</Text>
+          </Pressable>
         </View>
         <View style={styles.decorativeCircle} />
         <View style={styles.decorativeCircleSmall} />
@@ -58,6 +78,33 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     textAlign: "center",
     lineHeight: 26,
+  },
+  categoryGrid: {
+    marginTop: 32,
+    width: "100%",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    rowGap: 16,
+    zIndex: 1,
+  },
+  categoryButton: {
+    width: "48%",
+    paddingVertical: 14,
+    borderRadius: 16,
+    backgroundColor: COLORS.orangeLight,
+    alignItems: "center",
+    justifyContent: "center",
+    shadowColor: COLORS.brown,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.15,
+    shadowRadius: 4,
+    elevation: 3,
+  },
+  categoryLabel: {
+    fontSize: 16,
+    fontWeight: "600",
+    color: COLORS.cream,
   },
   decorativeCircle: {
     position: "absolute",
