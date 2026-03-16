@@ -1,5 +1,7 @@
-import { Text, View, StyleSheet, StatusBar, Pressable } from "react-native";
+import * as Updates from 'expo-updates';
+import { Pressable, StatusBar, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+
 
 const COLORS = {
   orange: "#E85D04",
@@ -10,6 +12,9 @@ const COLORS = {
   brown: "#5C4033",
   brownLight: "#8B7355",
 };
+
+
+console.log("Current Channel:", Updates.channel);
 
 export default function Index() {
   return (
