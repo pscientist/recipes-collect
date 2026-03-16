@@ -1,0 +1,12 @@
+name: OTA Update Preview
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  update_preview:
+    name: Publish OTA Update to Preview
+    type: update
+    params:
+      channel: preview
