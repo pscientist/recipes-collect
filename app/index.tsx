@@ -13,9 +13,6 @@ const COLORS = {
   brownLight: "#8B7355",
 };
 
-
-console.log("Current Channel:", Updates.channel);
-
 export default function Index() {
   return (
     <SafeAreaView style={styles.container} edges={["top", "bottom"]}>
@@ -26,8 +23,12 @@ export default function Index() {
           <Text style={styles.tagline}>
             Your cozy place for recipes you love
           </Text>
+          <Text>Current Channel: {Updates.channel}</Text>
         </View>
         <View style={styles.categoryGrid}>
+          <Pressable style={styles.categoryButton}>
+            <Text style={styles.categoryLabel}>📋 All</Text>
+          </Pressable>
           <Pressable style={styles.categoryButton}>
             <Text style={styles.categoryLabel}>🥗 Salads</Text>
           </Pressable>
